@@ -1,0 +1,39 @@
+[package]
+name = "barycenter"
+version = "0.1.0"
+edition = "2024"
+description = "A blazing-fast Wayland application launcher and command hub"
+license = "MIT"
+
+[dependencies]
+# UI — iced with Wayland layer-shell integration
+iced = { version = "0.13", default-features = false, features = [
+    "wgpu",
+    "tiny-skia",
+] }
+iced_layershell = "0.13"
+
+# Fuzzy matching — fastest available, used by Helix editor
+nucleo-matcher = "0.3"
+
+# Math expression evaluation
+meval = "0.2"
+
+# Config management
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+directories = "6"
+
+# Error handling
+anyhow = "1"
+
+# Logging
+log = "0.4"
+env_logger = "0.11"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true

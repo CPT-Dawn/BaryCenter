@@ -1,0 +1,62 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                        BARYCENTER CONFIGURATION                            ║
+# ║                                                                            ║
+# ║  A blazing-fast Wayland application launcher and command hub.              ║
+# ║  This file is auto-generated on first run. Edit freely.                    ║
+# ║  Delete this file to regenerate defaults.                                  ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ─── Window Geometry ──────────────────────────────────────────────────────────
+# Width and height of the launcher window in pixels.
+# The window will be centered on the active monitor automatically.
+width = 680
+height = 520
+
+# ─── Colors (hex RRGGBBAA — last two digits are alpha) ────────────────────────
+# "Cosmic Dawn" — electric cyan borders on a void-dark translucent backdrop,
+# with dawn-red accent highlights.
+
+# Border color: electric cyan.
+border_color = "#00FFFFff"
+
+# Background: true void, 90% opacity — lets compositor blur shine through.
+background_color = "#0D0B14e6"
+
+# Primary text color: cool off-white for readability on dark backgrounds.
+text_color = "#E0E6F0ff"
+
+# Accent color: dawn red/orange for selected result highlights.
+accent_color = "#FF4500ff"
+
+# ─── Typography ───────────────────────────────────────────────────────────────
+# Font family. Must be installed on the system.
+# Falls back to the iced default if not found.
+font_family = "Inter"
+
+# Base font size in pixels for the search input.
+font_size = 22.0
+
+# ─── Behavior ─────────────────────────────────────────────────────────────────
+# Maximum number of search results displayed at once.
+max_results = 8
+
+# Border width in pixels around the launcher window.
+border_width = 2.5
+
+# Corner radius in pixels for the window and result items.
+border_radius = 16.0
+
+# ─── Shell Runner ─────────────────────────────────────────────────────────────
+# The terminal emulator command used by the "> command" shell runner.
+# The command will be appended as:  terminal -e $SHELL -c "command; read"
+# Common values: "kitty", "alacritty", "foot", "wezterm"
+terminal = "kitty"
+
+# ─── Frecency ─────────────────────────────────────────────────────────────────
+# Enable frecency-based ranking. Recently and frequently launched apps
+# are boosted in search results.
+frecency_enabled = true
+
+# Decay constant (lambda). Higher = faster decay of old launches.
+# Default 0.1 means a launch 10 hours ago has ~50% weight.
+frecency_decay = 0.1
