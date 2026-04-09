@@ -1,4 +1,4 @@
-# BARYCENTER
+# BARYCENTER (Still 🛠️)
 
 **A zero-bloat, Wayland-native application launcher and command hub written in Rust.**
 
